@@ -17,7 +17,7 @@ int read_int(const string &prompt, int low, int high){
 			if (num <= low || num >= high) {
 				throw range_error("This number is out side of the range");
 			}
-			if (num > 2147483647)
+			if (num > 2147483647) //INT_MAX works too btw -RS
 				throw range_error("Input is too large.");
 			return num;
 		} catch (ios_base::failure& ex) {
